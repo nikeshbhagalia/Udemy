@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
 class SongList extends Component{
-    renderList(){
+    renderList() {
         return this.props.songs.map(song => {
             return (
                 <div className="item" key={song.title}>
@@ -16,12 +16,12 @@ class SongList extends Component{
             )
         })
     }
-    render(){
+    render() {
         return <div className="ui divided list">{this.renderList()}</div>
     }
 }
 
-const mapStateToProps = state =>{
+const mapStateToProps = state => {
     return {songs:state.songs}
 }
 
